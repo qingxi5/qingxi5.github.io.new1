@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo之渲染绕过, Java后端">
+    <meta name="keywords" content="工作流, Java后端">
     <meta name="description" content="Java开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo之渲染绕过 | QingXi</title>
+    <title>工作流 | QingXi</title>
 
     <link rel="icon" type="image/jpeg" href="https://gitee.com/qingxi5/typora/raw/master/img/20210519085506.jpg">
 
@@ -390,7 +390,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'shixi';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -403,12 +403,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928015500.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928013951.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo之渲染绕过</h1>
+                    <h1 class="description center-align post-title">工作流</h1>
                 </div>
             </div>
         </div>
@@ -529,12 +529,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87/">
-                                <span class="chip bg-color">渲染绕过</span>
+                            <a href="/tags/%E5%AE%9E%E4%B9%A0/">
+                                <span class="chip bg-color">实习</span>
                             </a>
                         
                     </div>
@@ -545,8 +541,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
-                                博客篇
+                            <a href="/categories/%E5%AE%9E%E4%B9%A0%E7%AF%87/" class="post-category">
+                                实习篇
                             </a>
                         
                     </div>
@@ -558,28 +554,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-28
+                    2021-05-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-19
+                    2021-05-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    463
+                    595
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -602,47 +598,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="0x001-Hexo-渲染"><a href="#0x001-Hexo-渲染" class="headerlink" title="0x001 Hexo 渲染"></a>0x001 Hexo 渲染</h3><p>  在Hexo部署时会默认渲染source下的所有html页面，但有时候想在Hexo博客上单独自定义html页面或README.md时，却不希望被Hexo渲染。因此对某个文件或者目录进行排除渲染是非常必要的。</p>
-<h3 id="0x002-方法一：font-matter"><a href="#0x002-方法一：font-matter" class="headerlink" title="0x002 方法一：font matter"></a>0x002 方法一：font matter</h3><p><code>Hexo</code>新建网站页面，然后将你的代码直接写入 <code>index.md</code> 中</p>
-<p>在 <code>Front matter</code> 中添加 <code>layout: false</code>，此方法适用于单一的纯<code>HTML</code><br><code>CSS</code> 页面。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: tools
-date: <span class="token number">2020</span>-04-28 00:00:00
-type: <span class="token string">"tools"</span>
-layout: <span class="token boolean">false</span>
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><pre class="line-numbers language-none"><code class="language-none">工作流服务框架由模板管理、配置规则、API及公共服务、工作流WEB组件四部分组成。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="0x003-方法二：skip-render"><a href="#0x003-方法二：skip-render" class="headerlink" title="0x003 方法二：skip render"></a>0x003 方法二：skip render</h3><p>在博客根目录下的 <code>_config.yml</code>，找到 <code>skip_render</code>，大概在32行左右，写入你想要的跳过渲染的路径，注意缩进和空格。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 指定目录跳过hexo渲染</span>
-skip_render:
-  - <span class="token string">'tools/*'</span>
-  - <span class="token string">'tools/**'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="二、开发前准备"><a href="#二、开发前准备" class="headerlink" title="二、开发前准备"></a>二、开发前准备</h2><h3 id="2-1-业务表单路径维护"><a href="#2-1-业务表单路径维护" class="headerlink" title="2.1 业务表单路径维护"></a>2.1 业务表单路径维护</h3><h4 id="2-1-1-税务事项业务服务搜索"><a href="#2-1-1-税务事项业务服务搜索" class="headerlink" title="2.1.1 税务事项业务服务搜索"></a>2.1.1 税务事项业务服务搜索</h4><h4 id="2-1-2-税务事项业务服务属性配置"><a href="#2-1-2-税务事项业务服务属性配置" class="headerlink" title="2.1.2 税务事项业务服务属性配置"></a>2.1.2 税务事项业务服务属性配置</h4><h4 id="2-1-3-页面按钮"><a href="#2-1-3-页面按钮" class="headerlink" title="2.1.3 页面按钮"></a>2.1.3 页面按钮</h4><h3 id="2-2-业务单元多事件维护"><a href="#2-2-业务单元多事件维护" class="headerlink" title="2.2 业务单元多事件维护"></a>2.2 业务单元多事件维护</h3><h4 id="2-2-1-业务单元信息"><a href="#2-2-1-业务单元信息" class="headerlink" title="2.2.1 业务单元信息"></a>2.2.1 业务单元信息</h4><h4 id="2-2-2-事件信息"><a href="#2-2-2-事件信息" class="headerlink" title="2.2.2 事件信息"></a>2.2.2 事件信息</h4><h2 id="三、流程定义配置"><a href="#三、流程定义配置" class="headerlink" title="三、流程定义配置"></a>三、流程定义配置</h2><pre class="line-numbers language-none"><code class="language-none">工作流流程定义配置分为以下几步：模板配置、流程建模、税务事项与业务流程关联、配置规则。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<blockquote>
-<p>注释：<code>tools/*</code> 表示在目录 <code>source/fireworks</code> 下的文件全部跳过渲染，<code>tools/**</code> 表示在博客根目录 <code>source/tools/</code> 文件夹下的文件全部跳过渲染（例如页面的 js、css 在另一个文件夹中）。</p>
-</blockquote>
-<h3 id="0x004-案例：webstack-导航"><a href="#0x004-案例：webstack-导航" class="headerlink" title="0x004 案例：webstack 导航"></a>0x004 案例：webstack 导航</h3><p><code>webstack</code>是一个纯静态的网址导航网站，内容均由<code>viggo</code>收集并整理。项目基于<code>bootstrap</code>前端框架开发。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shw2018/cdn@1.0/sakura/img/loader/orange.progress-bar-stripe-loader.svg" data-original="https://camo.githubusercontent.com/41111c4c1d9922982f380566e6a2f8415204c52c/687474703a2f2f7777772e776562737461636b2e63632f6173736574732f696d616765732f707265766965772e676966" alt="image"></p>
-<ul>
-<li>Github：<a target="_blank" rel="noopener" href="https://github.com/WebStackPage/WebStackPage.github.io">https://github.com/WebStackPage/WebStackPage.github.io</a></li>
-</ul>
-<p>在博客根目录 <code>source/</code>下新建<code>tools</code>，然后新建<code>index.html</code>,将<code>webstack</code>网页源码全选复制粘贴到里面。</p>
-<ul>
-<li>本站的webstack源码：<a href="view-source:http://luckyzmj.cn/tools/">view-source:http://luckyzmj.cn/tools/</a></li>
-</ul>
-<blockquote>
-<p>注意：将源码里的部分信息以及跳转链接按照你真实个人博客的环境进行修改。</p>
-</blockquote>
-<p>然后打开博客根目录下配置文件<code>_config.yml</code>，找到<code>skip_render</code>，做如下修改：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">skip_render:
-  - <span class="token string">'tools/*'</span>
-  - <span class="token string">'tools/**'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-1-模板管理配置"><a href="#3-1-模板管理配置" class="headerlink" title="3.1 模板管理配置"></a>3.1 模板管理配置</h3><h4 id="3-1-1-包与流程属性"><a href="#3-1-1-包与流程属性" class="headerlink" title="3.1.1 包与流程属性"></a>3.1.1 包与流程属性</h4><h4 id="3-1-2-活动定义"><a href="#3-1-2-活动定义" class="headerlink" title="3.1.2 活动定义"></a>3.1.2 活动定义</h4><h2 id="四、流程设计阶段"><a href="#四、流程设计阶段" class="headerlink" title="四、流程设计阶段"></a>四、流程设计阶段</h2><h3 id="4-1-页面按钮"><a href="#4-1-页面按钮" class="headerlink" title="4.1 页面按钮"></a>4.1 页面按钮</h3><h3 id="4-2-流程图节点选择"><a href="#4-2-流程图节点选择" class="headerlink" title="4.2 流程图节点选择"></a>4.2 流程图节点选择</h3><h3 id="4-3-业务流程数据相关"><a href="#4-3-业务流程数据相关" class="headerlink" title="4.3 业务流程数据相关"></a>4.3 业务流程数据相关</h3><h3 id="4-4-活动属性配置"><a href="#4-4-活动属性配置" class="headerlink" title="4.4 活动属性配置"></a>4.4 活动属性配置</h3><h3 id="4-5-连接弧属性配置"><a href="#4-5-连接弧属性配置" class="headerlink" title="4.5 连接弧属性配置"></a>4.5 连接弧属性配置</h3><h2 id="五、税务事项与业务流程关联"><a href="#五、税务事项与业务流程关联" class="headerlink" title="五、税务事项与业务流程关联"></a>五、税务事项与业务流程关联</h2><h2 id="六、配置规则整合链接"><a href="#六、配置规则整合链接" class="headerlink" title="六、配置规则整合链接"></a>六、配置规则整合链接</h2><p>一些界面标签说明</p>
+<h2 id="七、前端代码"><a href="#七、前端代码" class="headerlink" title="七、前端代码"></a>七、前端代码</h2><p>包括JSP和JS的一些使用</p>
+<h3 id="7-1-JSP修改"><a href="#7-1-JSP修改" class="headerlink" title="7.1 JSP修改"></a>7.1 JSP修改</h3><h3 id="7-2-JS按钮实现"><a href="#7-2-JS按钮实现" class="headerlink" title="7.2 JS按钮实现"></a>7.2 JS按钮实现</h3><h3 id="7-3-JS按钮状态"><a href="#7-3-JS按钮状态" class="headerlink" title="7.3 JS按钮状态"></a>7.3 JS按钮状态</h3><h2 id="八、后端代码"><a href="#八、后端代码" class="headerlink" title="八、后端代码"></a>八、后端代码</h2><h3 id="8-1-流程初始化"><a href="#8-1-流程初始化" class="headerlink" title="8.1 流程初始化"></a>8.1 流程初始化</h3><h4 id="8-1-1-功能菜单URL配置"><a href="#8-1-1-功能菜单URL配置" class="headerlink" title="8.1.1 功能菜单URL配置"></a>8.1.1 功能菜单URL配置</h4><p>url参数</p>
+<h4 id="8-1-2-后台初始化代码"><a href="#8-1-2-后台初始化代码" class="headerlink" title="8.1.2 后台初始化代码"></a>8.1.2 后台初始化代码</h4><p>在Ctrl方法中需要增加一行代码，进行流程初始化</p>
+<h3 id="8-2-流程发起"><a href="#8-2-流程发起" class="headerlink" title="8.2 流程发起"></a>8.2 流程发起</h3><h3 id="8-3-流程推送"><a href="#8-3-流程推送" class="headerlink" title="8.3 流程推送"></a>8.3 流程推送</h3><h3 id="8-4-流程回退"><a href="#8-4-流程回退" class="headerlink" title="8.4 流程回退"></a>8.4 流程回退</h3><h3 id="8-5-流程作废"><a href="#8-5-流程作废" class="headerlink" title="8.5 流程作废"></a>8.5 流程作废</h3><h2 id="九、流程回调服务配置"><a href="#九、流程回调服务配置" class="headerlink" title="九、流程回调服务配置"></a>九、流程回调服务配置</h2><h3 id="9-1-回退回调服务"><a href="#9-1-回退回调服务" class="headerlink" title="9.1 回退回调服务"></a>9.1 回退回调服务</h3><h3 id="9-2-作废回调服务"><a href="#9-2-作废回调服务" class="headerlink" title="9.2 作废回调服务"></a>9.2 作废回调服务</h3><h4 id="9-2-1-流程类作废回调服务"><a href="#9-2-1-流程类作废回调服务" class="headerlink" title="9.2.1 流程类作废回调服务"></a>9.2.1 流程类作废回调服务</h4><h4 id="9-2-2-非流程类作废回调服务"><a href="#9-2-2-非流程类作废回调服务" class="headerlink" title="9.2.2 非流程类作废回调服务"></a>9.2.2 非流程类作废回调服务</h4><pre class="line-numbers language-none"><code class="language-none">配置了作废回调服务后，需要在作废回调服务末尾加上如下代码：
+WfClient.getWfClient().endNonProcTask(String flcrwmxId);//作废即办任务
+至此，整个流程监控作废回调服务配置完成。
+示例代码如下：
+@Service(serviceName="DemoService_invalidSomeData")
+public void invalidSomeData(List&lt;AtomVO&gt; vo) throws SwordBaseCheckedException {
+//       处理业务逻辑
+WfClient.getWfClient().endNonProcTask(String flcrwmxId);//作废非流程任务
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>最后执行<code>hexo clean</code>和<code>hexo s -g </code>本地预览，检查无误后<code>hexo g -d</code>部署到服务器上即可。</p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://xiabor.com/2020/04/21/hexo3/#%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87hexo%E7%9A%84%E6%B8%B2%E6%9F%93">https://xiabor.com/2020/04/21/hexo3/#%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87hexo%E7%9A%84%E6%B8%B2%E6%9F%93</a></li>
-</ul>
-
+<h2 id="十、通用审批表单"><a href="#十、通用审批表单" class="headerlink" title="十、通用审批表单"></a>十、通用审批表单</h2><h3 id="10-1-表单配置"><a href="#10-1-表单配置" class="headerlink" title="10.1 表单配置"></a>10.1 表单配置</h3><h3 id="10-2-获取审批结果"><a href="#10-2-获取审批结果" class="headerlink" title="10.2 获取审批结果"></a>10.2 获取审批结果</h3><h3 id="10-3-判断是否终审"><a href="#10-3-判断是否终审" class="headerlink" title="10.3 判断是否终审"></a>10.3 判断是否终审</h3><h3 id="10-4-获取审批历史接口"><a href="#10-4-获取审批历史接口" class="headerlink" title="10.4 获取审批历史接口"></a>10.4 获取审批历史接口</h3><h3 id="10-5-获取审批表单"><a href="#10-5-获取审批表单" class="headerlink" title="10.5 获取审批表单"></a>10.5 获取审批表单</h3><h2 id="十一、工作流使用规范"><a href="#十一、工作流使用规范" class="headerlink" title="十一、工作流使用规范"></a>十一、工作流使用规范</h2><h2 id="十二、工作流接口"><a href="#十二、工作流接口" class="headerlink" title="十二、工作流接口"></a>十二、工作流接口</h2><h2 id="一、异常信息分析"><a href="#一、异常信息分析" class="headerlink" title="一、异常信息分析"></a>一、异常信息分析</h2><h2 id="二、常见问题"><a href="#二、常见问题" class="headerlink" title="二、常见问题"></a>二、常见问题</h2><h2 id="三、工作流表达式"><a href="#三、工作流表达式" class="headerlink" title="三、工作流表达式"></a>三、工作流表达式</h2>
                 
             </div>
             <hr/>
@@ -658,7 +632,7 @@ skip_render:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Luckey</a>
+                    <a href="/about" rel="external nofollow noreferrer">青昔</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -668,7 +642,7 @@ skip_render:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qingxi5.github.io/posts/17fd92ae.html">https://qingxi5.github.io/posts/17fd92ae.html</a>
+                    <a href="https://qingxi5.github.io/posts/qingxi100000.html">https://qingxi5.github.io/posts/qingxi100000.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -681,7 +655,7 @@ skip_render:
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Luckey</a>
+                    <a href="/about" target="_blank">青昔</a>
                     !
                 </span>
             </div>
@@ -706,12 +680,8 @@ skip_render:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87/">
-                                    <span class="chip bg-color">渲染绕过</span>
+                                <a href="/tags/%E5%AE%9E%E4%B9%A0/">
+                                    <span class="chip bg-color">实习</span>
                                 </a>
                             
                         </div>
@@ -1187,31 +1157,31 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/d74d8b76.html">
+                <a href="/posts/qingxi100001.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928013834.jpg" class="responsive-img" alt="LuckyBlog开源搭建教程">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020120.jpg" class="responsive-img" alt="ESB">
                         
-                        <span class="card-title">LuckyBlog开源搭建教程</span>
+                        <span class="card-title">ESB</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            之前在B站上发布了个人博客的视频，播放量也破千了，有网友私聊也想要搭建一个这样的博客。经过一段时间的准备，现将博客LuckyBlog的源代码公布出来，大家只需要根据以下的步骤，即可快速搭建一个漂亮且完善的博客。
+                            ESB开发
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-20
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
-                                    博客篇
+                            <a href="/categories/%E5%AE%9E%E4%B9%A0%E7%AF%87/" class="post-category">
+                                    实习篇
                                 </a>
                             
                             
@@ -1221,12 +1191,8 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo-blog-lucky/">
-                        <span class="chip bg-color">hexo-blog-lucky</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">博客搭建教程</span>
+                    <a href="/tags/%E5%AE%9E%E4%B9%A0/">
+                        <span class="chip bg-color">实习</span>
                     </a>
                     
                 </div>
@@ -1240,31 +1206,31 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4b3510a4.html">
+                <a href="/posts/e3e00517.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928020120.jpg" class="responsive-img" alt="文字背景粒子特效">
+                        <img src="https://cdn.jsdelivr.net/gh/LuckyZmj/imgbed@master/posts/20200928013346.png" class="responsive-img" alt="web框架培训">
                         
-                        <span class="card-title">文字背景粒子特效</span>
+                        <span class="card-title">web框架培训</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一款jQuery+CSS3的文字背景粒子动画特效，一共6种粒子效果，每种文字背景的粒子效果都不同，有漂浮的有坠落的等等。 
+                            web框架
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/" class="post-category">
-                                    前端篇
+                            <a href="/categories/%E5%AE%9E%E4%B9%A0%E7%AF%87/" class="post-category">
+                                    实习篇
                                 </a>
                             
                             
@@ -1274,12 +1240,8 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jQuery-CSS3/">
-                        <span class="chip bg-color">jQuery+CSS3</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88/">
-                        <span class="chip bg-color">粒子特效</span>
+                    <a href="/tags/%E5%AE%9E%E4%B9%A0/">
+                        <span class="chip bg-color">实习</span>
                     </a>
                     
                 </div>
@@ -1558,7 +1520,7 @@ new Valine({
 			<br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;总字数：&nbsp;<span
-                class="white-color">16.3k</span>&nbsp;字
+                class="white-color">3.9k</span>&nbsp;字
             
             
             
